@@ -4,12 +4,12 @@
     <div class="form-group">
         <div class="input-group">
             <input type="text" v-model="newItem" class="form-control">
-            <span class="input-group-btn"><button class="btn btn-primary" @keydown.enter="onKeyDown()" @click="addItem()">登録</button></span>
+            <span class="input-group-btn"><button class="btn btn-primary" @keyup.enter="addItem()" @click="addItem()">登録</button></span>
             <!-- <input @name.enter="addItem()"> -->
             <span class="input-group-btn"><button class="btn btn-primary1" @click="shuffles()">シャッフルスタート！！</button></span>
         </div>
         <ul class="submit_group">
-          <li class="list_group" v-for="todo in todos" :key="todo">{{todo}}</li>
+          <!-- <li class="list_group" v-for="todo in todos" :key="todo">{{todo}}</li> -->
         </ul>
     </div>
 
